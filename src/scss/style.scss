@@ -1,0 +1,84 @@
+@use 'sass:math';
+//Подключение шрифтов
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+//Подлкючаем если есть локальные шрифты
+@import "./fonts.scss";
+//Подлкючаем если есть иконочный шрифт
+@import "./icons.scss";
+//Цвета тектса и фона
+$WhiteColor:#FFF;
+$PinkColor:#E43071;
+$KermitGreenColor:#26D68A;
+$SubGreenColor:#9BE8C7;
+$SubPinkColor:#FFC1D8;
+$GrayOneColor:#252525;
+$GrayTooColor:#424242;
+$GrayThreeColor:#858585;
+$GrayFourColor:#D2D2D2;
+$GrayFiveColor:#EDEDED;
+//Обнуление и общие параметры
+body,html{
+	height: 100%;
+	margin: 0;
+}
+body{
+	//Скрол заблокирован
+	.lock &{
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+//Оболочка
+.wrapper{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports(overflow: clip){
+		overflow: clip;
+	}
+	//Сайт загружен
+	
+	// Прижимаем футер 
+	> main{
+		flex: 1 1 auto;
+	}
+	//Фикс для слайдеров
+	> * {
+		min-height: 0;
+	}
+}
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+//Импортируем файлы других стилей
+//шапка
+@import "./header.scss";
+//футер 
+@import "./footer.scss";
+//основная информация
+@import "./main.scss";
+//Адаптив
+@import "./media.scss";

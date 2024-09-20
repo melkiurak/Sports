@@ -1,0 +1,101 @@
+.header {  
+}
+.container__header {
+    max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 30px 0;
+    background-color: $PinkColor;
+}
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 101px;
+    color: $WhiteColor;
+        // .container-header__logo
+        &__logo{
+            font-size: 40px;
+        }
+		// .container-header__menu
+		&__menu {
+        }
+		// .container-header__btn
+		&__btn {
+            width: 166px;
+            height: 50px;
+            border: none;
+            border-radius: 100px;
+            color: $PinkColor;
+            font-family: 'Poppins', sans-serif;
+        }
+}
+    .menu {
+        // .menu__burger
+        &__burger {
+            display: none;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            z-index:2;
+            overflow: hidden;
+            border: none;
+            background: none;
+        }
+        &__burger span {
+            width: 24px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $WhiteColor;
+            transition: all 0.5s;
+        }
+        &__burger  span:nth-of-type(2) {
+            top: calc(50% - 5px);
+        }
+        &__burger  span:nth-of-type(3) {
+            top: calc(50% + 5px);
+            width: 7px;
+            left: 59%;
+        }
+		// .menu__body
+
+		&__body {
+		}
+
+		// .menu__list
+
+		&__list {
+            display: flex;
+            gap:76px;
+            font-family: 'Poppins', sans-serif;
+		}
+
+		// .menu__item
+
+		&__item {
+		}
+
+		// .menu__link
+
+		&__link {
+		}
+        // .menu__loupe
+        &__loupe{
+            font-size: 20px;
+            margin-left: -10px;
+        }
+    }
+    /* Меняем гамбургер иконку, когда меню открыто */
+    .menu__burger.active span:nth-of-type(1) {
+        display: none;
+    }
+    .menu__burger.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);  
+    }
+    .menu__burger.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg); 
+    }

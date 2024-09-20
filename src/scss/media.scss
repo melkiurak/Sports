@@ -1,0 +1,290 @@
+@media (max-width:1400px){
+    //Header
+    .container__header{
+        max-width: 1024px;
+        height: calc(80px + (101 - 80) * ((100vw - 320px) / (1400 - 320)));
+        .container-header{
+            &__logo{
+                font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1400 - 320)));
+            }
+            &__btn{
+                display: none;
+            }
+        }
+        .menu{
+            &__body{
+                transform: translateX(-1000%);
+                transition: transform 0.3s ease-out;
+            }
+            &__body.active{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: $GrayOneColor;
+                height: 100%;
+                width: 100%;
+                z-index: 10;
+                transform: translateX(0);
+            }
+            &__list{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-size: 20px;
+            }
+            &__burger{
+                display: block;
+            }
+            &__burger.active{
+                position: absolute;
+                z-index: 10;
+                right: 30px;
+            }
+        }
+    }
+    //Main
+    .welcome-container{
+        &__title{
+        font-size: calc(32px + (70 - 32) * ((100vw - 320px) / (1400 - 320)));
+        }
+    }
+    .swiper{
+        max-width: 1024px;
+    }
+    .swiper-slide{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw; /* Занимает 100% ширины экрана */
+        height: 100vh; /* Занимает 100% высоты экрана */
+    }
+    .container__body{
+        max-width: 1024px;
+    } 
+    .container__Premium{
+        max-width: 1024px;
+    }
+    .container__comments{
+        max-width: 1024px;
+        padding: 0;
+    } 
+    .container__app{
+        max-width: 1024px;
+
+    }
+    .container__social{
+        max-width: 1024px;
+    }
+    //Footer
+    .container__footer{
+        max-width: 1024px;
+    }
+}
+@media(max-width:1024px){
+    .container__header{
+        max-width: 768px;
+    }
+    //main
+    .container__welcome{
+        max-width: 768px;
+    }
+    .container__body{
+        max-width: 768px;
+    }
+    .img__one{
+        max-width: 255px;
+    }
+    .img__too{
+        max-width: 255px;
+        top:13em;
+        left: 11em;
+    }
+    .body-container{
+        gap: 145px;
+    }
+    .container__Evolve{
+        max-width: 768px;
+    }
+    .container__Premium{
+        max-width: 768px;
+    }
+    .Premium-container{
+        position: relative;
+        gap: 30px;
+        &__info{
+            max-width: 350px;
+        }
+    }
+.img__three{
+    position: absolute;
+    max-width: 250px;
+    right: 5em;
+    top: 1em;
+    z-index: 3;
+}
+.img__four{
+    position: absolute;
+    top: 25%;
+    right: 0;
+    max-width: 250px;
+}
+    .container__comments{
+        max-width: 768px;    
+    }
+    .Comments-container{
+    }
+    .swiper{
+        max-width: 768px;
+    }
+    .container__app{
+        max-width: 768px;
+        height: 666px;
+    }
+    .app-container{
+        display: flex;
+        flex-direction: column;
+        &__mobile{
+            img{
+                max-width: 40%;
+            }
+        }
+    }
+    .container__social{
+        max-width: 768px;
+    }
+    //FOTOOR
+    .container__footer{
+        max-width: 768px;
+    }
+}
+@media (max-width:768px){
+    .container__header{
+        max-width: none;
+    }
+    .menu__loupe{
+        margin-left: -50px;
+    }
+    //main
+    .swiper-button-next,
+    .swiper-button-prev{
+        display: none;
+    }
+    .container__welcome{
+        max-width: none;
+    } 
+    //---------------------BODY------------------------------
+    .container__body{
+        max-width: none;
+    }
+    .body-container{
+        display: block;
+        height: 767px;
+        max-width: 288px;
+        &__info{
+            margin-top: 110px;
+            padding: 0;
+        }
+    }
+    .container__Evolve{
+        max-width: none;
+    }
+
+    .img__one{
+        max-width: 150px;
+    }
+    .img__too{
+        left: 8em;
+        top:10em;
+        max-width: 125px;
+    }
+    
+    //-----------------------------------Premium--------------------------------
+    .Premium{
+        margin-top: 60px;
+    }
+    .container__Premium{
+        max-width: none;
+    }
+    .Premium-container{
+        flex-direction: column;
+        align-items: center;
+        height: 644px;
+        max-width: 288px;
+        gap: 85px;
+        &__img{
+            order: -1;
+            margin: 0;
+        }
+        &__info{
+            margin-top: 110px;
+            padding: 0;
+        }
+    }
+.img__three{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+.img__four{
+    position: absolute;
+    top: 4em;
+    right: 1em;
+    width: 200px;
+}
+    .container__comments{
+        max-width: none;
+    }
+    .container__app{
+        max-width: none;
+        height: 972px;
+        justify-content: space-around;
+       }
+    .app-container__mobile{
+        img{
+            max-width: 70%;
+        }
+    }
+    .Comments-container{
+        margin: 0 auto;
+        text-align: center;
+        h3{
+            max-width: none;
+        }
+    }
+    .swiper{
+        max-width: none;
+
+    }
+    .swiper-slide{
+        background-position: 65% center;
+        width: 50px;
+    }
+    .Comments-container{
+        margin: 0 auto;
+    }
+    .container__social{
+        max-width: none;
+    }
+    .links{
+        max-width: 60px;
+        height: 60px;
+    }
+    //FOTOOR
+    .container__footer{
+        max-width: none;
+        height: 1140px;
+    }
+    .footer-container {
+        display: flex;
+        align-items:center;
+        position: relative;
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom:110px;
+    }
+    .sub-footer{
+        display:block;
+        text-align: center;
+    }
+}
